@@ -23,6 +23,7 @@ function ParticipantItem({
             text={fileContent}
             language={fileLanguage}
             showLineNumbers={true}
+            // @ts-ignore
             theme={dracula}
           />
         </div>
