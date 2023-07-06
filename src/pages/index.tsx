@@ -22,10 +22,10 @@ export default function HomePage() {
           <div className="flex mt-12 mb-12 items-center gap-4">
             <h1 className="text-4xl font-bold">PODTRINDA</h1>
             <a
-              className="btn btn-secondary"
+              className="btn btn-primary"
               href="https://www.youtube.com/watch?v=qvq5gH5Rwvc&list=PLqlhBWSkJaoL6MUjkDZt9hwNCFg05a6qq"
             >
-              VER PODCAST
+              VER PLAYLIST
             </a>
           </div>
 

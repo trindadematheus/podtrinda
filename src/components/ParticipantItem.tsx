@@ -13,7 +13,7 @@ function ParticipantItem({
 }: ParticipantItemProps) {
   return (
     <>
-      <div className="card card-compact bg-base-200 text-primary-content">
+      <div className="card card-compact self-start bg-base-200 text-primary-content">
         <div className="card-body">
           <div className="flex justify-between items-center">
             <h2 className="card-title text-base-content">{fileName}</h2>
