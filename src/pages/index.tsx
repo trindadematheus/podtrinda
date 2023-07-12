@@ -23,7 +23,7 @@ export default function HomePage() {
           <div className="flex mb-12 items-center gap-4">
             <h1 className="text-4xl font-bold">PODTRINDA</h1>
             <a
-              className="btn btn-primary"
+              className="btn btn-primary rounded-none"
               href="https://youtube.com/playlist?list=PLqlhBWSkJaoL6MUjkDZt9hwNCFg05a6qq"
             >
               VER PLAYLIST
