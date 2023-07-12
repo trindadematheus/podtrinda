@@ -13,7 +13,7 @@ function ParticipantItem({
 }: ParticipantItemProps) {
   return (
     <>
-      <div className="card card-compact self-start bg-base-200 text-primary-content">
+      <div className="card card-compact self-start bg-base-200/50 text-primary-content">
         <div className="card-body">
           <div className="flex justify-between items-center">
             <h2 className="card-title text-base-content">{fileName}</h2>
@@ -23,6 +23,9 @@ function ParticipantItem({
             text={fileContent}
             language={fileLanguage}
             showLineNumbers={true}
+            codeContainerStyle={{
+              maxHeight: 700
+            }}
             // @ts-ignore
             theme={dracula}
           />

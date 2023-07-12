@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import { Masonry } from "react-plock";
 
 import ParticipantItem from "@/components/ParticipantItem";
 
@@ -18,27 +19,33 @@ export default function HomePage() {
   return (
     <>
       <div>
-        <div className="container max-w-4xl">
-          <div className="flex mt-12 mb-12 items-center gap-4">
+        <div className="container py-12 max-w-4xl">
+          <div className="flex mb-12 items-center gap-4">
             <h1 className="text-4xl font-bold">PODTRINDA</h1>
             <a
               className="btn btn-primary"
-              href="https://www.youtube.com/watch?v=qvq5gH5Rwvc&list=PLqlhBWSkJaoL6MUjkDZt9hwNCFg05a6qq"
+              href="https://youtube.com/playlist?list=PLqlhBWSkJaoL6MUjkDZt9hwNCFg05a6qq"
             >
               VER PLAYLIST
             </a>
           </div>
 
-          <div className="grid grid-flow-row gap-8 grid-cols-2">
-            {data.map((code: any) => (
+          <Masonry
+            items={data}
+            config={{
+              columns: [1, 2],
+              gap: [8, 14],
+              media: [640, 1024],
+            }}
+            render={(code: any) => (
               <ParticipantItem
                 key={code.fileName}
                 fileName={code.fileName}
                 fileContent={code.fileContent}
                 fileLanguage={code.fileLanguage}
               />
-            ))}
-          </div>
+            )}
+          />
         </div>
       </div>
     </>
