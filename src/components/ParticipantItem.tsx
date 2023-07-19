@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CodeBlock, dracula } from "react-code-blocks";
 
 type ParticipantItemProps = {
@@ -13,10 +14,15 @@ function ParticipantItem({
 }: ParticipantItemProps) {
   return (
     <>
-      <div className="card rounded-none card-compact self-start bg-base-200/50 text-primary-content">
+      <div
+        id={fileName}
+        className="card rounded-none card-compact self-start bg-base-200/50 text-primary-content"
+      >
         <div className="card-body">
           <div className="flex justify-between items-center">
-            <h2 className="card-title text-base-content">{fileName}</h2>
+            <Link href={`#${fileName}`}>
+              <h2 className="card-title text-base-content">{fileName}</h2>
+            </Link>
           </div>
 
           <CodeBlock
@@ -24,7 +30,7 @@ function ParticipantItem({
             language={fileLanguage}
             showLineNumbers={true}
             codeContainerStyle={{
-              maxHeight: 700
+              maxHeight: 600,
             }}
             // @ts-ignore
             theme={dracula}
